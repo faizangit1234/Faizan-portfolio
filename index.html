@@ -1,96 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Developer Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    body {
-        background-color: rgb(0, 0, 33);
-        color: white;
-        font-family: "Poppins", sans-serif;
+</head>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(18, 18, 62);
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul li {
-        list-style: none;
-        margin: 0 23px;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color: white;
-    }
-    nav ul li a:hover{
-        color: rgb(136, 136, 226);
-        font-size: 1.05rem;
-    }
-
-    .left {
-        font-size: 1.5rem;
-    }
-
-    .firstSection {
-        display: flex;
-        justify-content: space-around;
-        margin: 100px 0;
-        align-items: center;
-    }
-
-    .firstSection div> {
-        width: 30%;
-
-    }
-
-    .leftSection {
-        
-        font-size: 3rem;
-        
-    }
-
-    .rightSection img {
-        width: 80%;
-        }
-        .purple{
-            color: rgb(192, 151, 231);
-        }
-    </style>
-    </head>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    
-    <body>
-        <header>
+<body>
+    <header>
         <nav>
             <div class="left">Faizan's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://github.com/faizangit1234/Faizan-portfolio">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
+
 
         </nav>
     </header>
@@ -99,26 +34,76 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                Hi, my name is <span class="purple">Faizan </span> 
-            <div>and i am a passionate </div>
-               <div> Web developer</div>
-               <span id="element"></span>
+                Hello there! I am <span class="purple">Faizan </span>
+                <div>A passionate developer  </div>
+                <div>with expertise in</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <script>
+                        function linkedin(){
+                            window.open("https://www.linkedin.com/in/faizan-farooq-7110952ab/")
+                        }
+                        function github(){
+                            window.open("https://github.com/faizangit1234/Faizan-portfolio")
+                        }
+                    </script>
+                    <button class="btn" onclick="linkedin()">Download Resume</button>
+                    <button class="btn" onclick="github()">VisitGitHub</button>
+                </div>
             </div>
             <div class="rightSection">
                 <img src="bg.png.png" alt="developer">
             </div>
         </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-grey">What I Have Done</span>
+            <h1>Academic Details</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="study.png" alt="html code">
+                    <div class="title">School </div>
+                    <div class="date"></div>
+                    <div class="description">City Central Educational Institute Khanyar</div>
+                </div>
+                <div class="vertical">
+                    <img src="study.png" alt="html code">
+                    <div class="title">Higher secondary</div>
+                    <div class="description">SP MODEL higher secondary M.A ROAD</div>
+                </div>
+                <div class="vertical">
+                    <img src="study.png" alt="html code">
+                    <div class="title">Graduation</div>
+                    <div class="description">Islamia college of science and commerce Hawal srinagar</div>
+                </div>
+                <div class="vertical">
+                    <img src="study.png" alt="html code">
+                    <div class="title">Student/Intern</div>
+                    <div class="description">Sublime Enterprises, B/O: Baghat Barzulla</div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!-- Load library from the CDN -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3 id="h3" onclick="github()">Faizan's Portfolio</h3>
+             </div>
+        <div class="footer-rights">
+            www.faizan'sportfolio.com | ALL RIGHTS RESERVED &#169;.
+        </div>
+    </footer>
 
-  <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web developer', 'passionate', 'video editor','writing','book reading'],
-      typeSpeed: 50,
-    });
-  </script>
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Development', 'Web Designing', 'Video Editing', 'HTML5', 'CSS3','JS','PHP', 'JAVA', 'MYSQL','OOPS','and more......👇'],
+            typeSpeed: 50,
+        });
+    </script>
 
 
 </body>
